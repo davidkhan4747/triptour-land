@@ -1,8 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   reactStrictMode: true,
+  images: {
+    domains: ['images.unsplash.com'],
+  },
+  i18n: {
+    locales: ['uz', 'ru', 'en'],
+    defaultLocale: 'uz',
+  },
 };
 
 export default nextConfig;

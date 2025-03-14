@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <text x="10" y="40" font-family="Montserrat" font-size="32" font-weight="bold" fill="rgb(103, 44, 142)">TripTour</text>
+  <path d="M170 20C170 31.0457 161.046 40 150 40C138.954 40 130 31.0457 130 20C130 8.95431 138.954 0 150 0C161.046 0 170 8.95431 170 20Z" fill="rgb(103, 44, 142)" fill-opacity="0.1"/>
+  <path d="M150 10L145 25H155L150 10Z" stroke="rgb(103, 44, 142)" stroke-width="2"/>
+</svg>

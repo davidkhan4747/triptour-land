@@ -1,0 +1,1 @@
+This directory contains destination images for the Trip Tour website.
