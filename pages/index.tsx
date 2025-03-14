@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import { Montserrat } from 'next/font/google';
 import Layout from '@/components/Layout/Layout';
+import SEO from '@/components/SEO';
 import Hero from '@/components/sections/Hero';
 import About from '@/components/sections/About';
 import Contact from '@/components/sections/Contact';
@@ -27,6 +28,7 @@ export default function Home() {
 
   return (
     <div className={`${montserrat.variable} font-sans bg-white`}>
+      <SEO language={language} />
       <Layout language={language} onLanguageChange={handleLanguageChange}>
         <Hero language={language} />
         <About language={language} />
