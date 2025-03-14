@@ -12,6 +12,14 @@ const navigation = [
     }
   },
   {
+    href: '#contact',
+    label: {
+      uz: 'Kontaktlar',
+      ru: 'Контакты',
+      en: 'Contact'
+    }
+  },
+  {
     href: '#services',
     label: {
       uz: 'Xizmatlar',

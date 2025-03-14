@@ -4,6 +4,7 @@ import { Montserrat } from 'next/font/google';
 import Layout from '@/components/Layout/Layout';
 import Hero from '@/components/sections/Hero';
 import About from '@/components/sections/About';
+import Contact from '@/components/sections/Contact';
 import Services from '@/components/sections/Services';
 import Destinations from '@/components/sections/Destinations';
 // import Reviews from '@/components/sections/Reviews';
@@ -29,6 +30,7 @@ export default function Home() {
       <Layout language={language} onLanguageChange={handleLanguageChange}>
         <Hero language={language} />
         <About language={language} />
+        <Contact language={language} />
         <Services language={language} />
         <Destinations language={language} />
         <Study language={language} />
