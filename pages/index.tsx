@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Image from 'next/image';
+
 import { Montserrat } from 'next/font/google';
 import Layout from '@/components/Layout/Layout';
 import Hero from '@/components/sections/Hero';

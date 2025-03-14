@@ -59,7 +59,7 @@ export default function Hero({ language }: HeroProps) {
       setCurrentImage((prev) => (prev + 1) % images.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [images.length]);
 
   const containerVariants = {
     hidden: { opacity: 0 },

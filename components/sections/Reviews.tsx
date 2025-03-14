@@ -148,7 +148,7 @@ export default function Reviews({ language }: ReviewsProps) {
 
               {/* Review Text */}
               <p className="text-xl text-gray-600 italic mb-8">
-                "{reviews[currentIndex].review[language]}"
+                &ldquo;{reviews[currentIndex].review[language]}&rdquo;
               </p>
 
               {/* Author */}
