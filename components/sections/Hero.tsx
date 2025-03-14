@@ -140,7 +140,7 @@ export default function Hero({ language }: HeroProps) {
             {content.description[language]}
           </motion.p>
           <motion.a
-            href="https://t.me/TripTour_bot"
+            href="https://t.me/triptour_uz"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-[rgb(103,44,142)] text-white px-8 py-4 rounded-full text-lg font-semibold 
