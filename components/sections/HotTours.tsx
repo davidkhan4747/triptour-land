@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { Language } from '@/types';
 import Image from 'next/image';
 
@@ -12,6 +12,7 @@ interface Tour {
   };
   price: number;
   image: {
+    name: string;
     path: string;
   };
   type: string[];
@@ -26,12 +27,12 @@ interface HotToursProps {
   language: Language;
 }
 
-export default function HotTours({ language }: HotToursProps) {
+export default function HotTours({ language }: HotToursProps): React.ReactElement {
   const [tours, setTours] = useState<Tour[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const fetchTours = async () => {
+  const fetchTours = useCallback(async () => {
     try {
       const response = await fetch('https://api.triptour.uz/tour', {
         headers: {
@@ -99,7 +100,7 @@ export default function HotTours({ language }: HotToursProps) {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [language]);
 
   useEffect(() => {
     fetchTours();
@@ -294,7 +295,7 @@ export default function HotTours({ language }: HotToursProps) {
                     transition={{ type: 'spring', stiffness: 300 }}
                   >
                     <div className="text-3xl font-bold text-[rgb(103,44,142)] group-hover:opacity-0 transition-opacity duration-300">
-                      {`${tour.price} $`}
+                      {`${tour.price} сум`}
                     </div>
                     <div className="absolute top-0 left-0 w-full text-3xl font-bold text-[rgb(83,24,122)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       {`${tour.price} сум`}
