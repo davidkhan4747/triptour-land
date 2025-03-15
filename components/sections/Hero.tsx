@@ -23,6 +23,11 @@ const content = {
     uz: 'Sayohatni rejalashtirish',
     ru: 'Планировать путешествие',
     en: 'Plan Your Trip'
+  },
+  contacts: {
+    uz: 'Kontaktlar',
+    ru: 'Контакты',
+    en: 'Contacts'
   }
 };
 
@@ -134,24 +139,41 @@ export default function Hero({ language }: HeroProps) {
             {content.subtitle[language]}
           </motion.p>
           <motion.p 
-            className="text-gray-300 mb-12 text-lg max-w-2xl mx-auto"
+            className="text-gray-300 mb-6 text-lg max-w-2xl mx-auto"
             variants={itemVariants}
           >
             {content.description[language]}
           </motion.p>
-          <motion.a
-            href="https://t.me/triptour_uz"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-[rgb(103,44,142)] text-white px-8 py-4 rounded-full text-lg font-semibold 
-                       hover:bg-[rgb(83,24,122)] transition-all duration-300 
-                       transform hover:scale-105 active:scale-95 hover:shadow-lg"
+          <motion.p
+            className="text-4xl md:text-5xl font-bold mb-8 text-white"
             variants={itemVariants}
-            whileHover={{ scale: 1.05, y: -5 }}
-            whileTap={{ scale: 0.95 }}
           >
-            {content.cta[language]}
-          </motion.a>
+            +998 78 555 77 88
+          </motion.p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <motion.a
+              href="tel:+998785557788"
+              className="inline-block bg-[rgb(103,44,142)] text-white px-8 py-4 rounded-full text-lg font-semibold 
+                         hover:bg-[rgb(83,24,122)] transition-all duration-300 
+                         transform hover:scale-105 active:scale-95 hover:shadow-lg"
+              variants={itemVariants}
+              whileHover={{ scale: 1.05, y: -5 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {content.cta[language]}
+            </motion.a>
+            <motion.a
+              href="#branches"
+              className="inline-block bg-white text-[rgb(103,44,142)] px-8 py-4 rounded-full text-lg font-semibold 
+                         hover:bg-[rgb(83,24,122)] hover:text-white transition-all duration-300 
+                         transform hover:scale-105 active:scale-95 hover:shadow-lg"
+              variants={itemVariants}
+              whileHover={{ scale: 1.05, y: -5 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {content.contacts[language]}
+            </motion.a>
+          </div>
         </motion.div>
       </motion.div>
 

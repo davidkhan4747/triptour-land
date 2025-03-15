@@ -13,7 +13,7 @@ interface Branch {
   id: number;
   name: LanguageString;
   address?: LanguageString;
-  phone: string;
+  phones: string[];
   type: LanguageString;
   image?: string;
 }
@@ -26,127 +26,202 @@ const branches: Branch[] = [
   {
     id: 1,
     name: {
-      uz: 'Toshkent',
-      ru: 'Ташкент',
-      en: 'Tashkent'
+      uz: 'Markaziy',
+      ru: 'Центральный',
+      en: 'Central'
     },
     address: {
-      uz: 'Ipak Yo\'li ko\'chasi 48',
-      ru: 'Улица Ипак Йули 48',
-      en: '48 Ipak Yuli Street'
+      uz: 'Mirzo-Ulug\'bek tumani, Buyuk Ipak Yo\'li mavzesi, 48',
+      ru: 'Мирзо-Улугбекский район, массив Буюк Ипак Йули, 48',
+      en: 'Mirzo-Ulugbek district, Buyuk Ipak Yuli area, 48'
     },
-    phone: '90 041 77 88',
+    phones: ['90 041 77 88', '90 042 77 88', '90 826 77 88', '90 962 77 88'],
     type: {
       uz: 'Markaziy ofis',
       ru: 'Центральный офис',
       en: 'Central Office'
     },
-    image: '/assets/images/branches/tashkent_bratskiy.jpeg'
+    image: '/assets/images/branches/tashkent_c1.jpeg'
   },
   {
     id: 2,
     name: {
-      uz: 'Xorazm',
-      ru: 'Хорезм',
-      en: 'Khorezm'
+      uz: 'Bratskiy',
+      ru: 'Братский',
+      en: 'Bratskiy'
     },
-    phone: '90 829 77 88',
+    address: {
+      uz: 'Shota Rustaveli ko\'chasi, 122',
+      ru: 'ул. Шота Руставели, 122',
+      en: 'Shota Rustaveli st., 122'
+    },
+    phones: ['90 129 77 88', '90 345 77 88'],
     type: {
-      uz: 'Franchiza',
-      ru: 'Франшиза',
-      en: 'Franchise'
+      uz: 'Filial',
+      ru: 'Филиал',
+      en: 'Branch'
     },
-    image: '/assets/images/branches/namangan.PNG'
+    image: '/assets/images/branches/tashkent_bratskiy.jpeg'
+  },
+  {
+    id: 3,
+    name: {
+      uz: 'Yakkasaroy',
+      ru: 'Яккасарай',
+      en: 'Yakkasaroy'
+    },
+    address: {
+      uz: 'Bobur ko\'chasi, 59',
+      ru: 'Бобур кочаси, 59',
+      en: 'Bobur st., 59'
+    },
+    phones: ['90 193 88 88', '90 194 88 88'],
+    type: {
+      uz: 'Filial',
+      ru: 'Филиал',
+      en: 'Branch'
+    },
+    image: '/assets/images/branches/tashkent_premium.jpeg'
   },
   {
     id: 4,
-    name: {
-      uz: 'Buxoro',
-      ru: 'Бухара',
-      en: 'Bukhara'
-    },
-    phone: '90 244 77 88',
-    type: {
-      uz: 'Franchiza',
-      ru: 'Франшиза',
-      en: 'Franchise'
-    },
-    image: '/assets/images/branches/buxoro.JPG'
-  },
-  {
-    id: 5,
-    name: {
-      uz: 'Navoiy',
-      ru: 'Навои',
-      en: 'Navoi'
-    },
-    phone: '90 069 77 88',
-    type: {
-      uz: 'Franchiza',
-      ru: 'Франшиза',
-      en: 'Franchise'
-    },
-    image: '/assets/images/branches/navoi.jpeg'
-  },
-  {
-    id: 6,
-    name: {
-      uz: 'Samarqand',
-      ru: 'Самарканд',
-      en: 'Samarkand'
-    },
-    phone: '90 052 77 88',
-    type: {
-      uz: 'Franchiza',
-      ru: 'Франшиза',
-      en: 'Franchise'
-    },
-    image: '/assets/images/branches/samarqand.jpeg'
-  },
-  {
-    id: 8,
     name: {
       uz: 'Namangan',
       ru: 'Наманган',
       en: 'Namangan'
     },
-    phone: '90 053 77 88',
+    address: {
+      uz: 'Turaqo\'rg\'on ko\'chasi, Namangan 182',
+      ru: 'Туракурганская улица, Наманган 182',
+      en: 'Turaqurgon st., Namangan 182'
+    },
+    phones: ['90 053 88 88', '90 496 88 88'],
     type: {
-      uz: 'Franchiza',
-      ru: 'Франшиза',
-      en: 'Franchise'
+      uz: 'Filial',
+      ru: 'Филиал',
+      en: 'Branch'
     },
     image: '/assets/images/branches/namangan.PNG'
   },
   {
-    id: 9,
+    id: 5,
     name: {
-      uz: 'Qo\'qon',
-      ru: 'Коканд',
-      en: 'Kokand'
+      uz: 'Andijon',
+      ru: 'Андижан',
+      en: 'Andijan'
     },
-    phone: '90 816 77 88',
+    address: {
+      uz: 'Toshkent ko\'chasi',
+      ru: 'Ташкентская улица',
+      en: 'Tashkent st.'
+    },
+    phones: ['90 065 22 77', '90 065 22 99'],
     type: {
-      uz: 'Franchiza',
-      ru: 'Франшиза',
-      en: 'Franchise'
+      uz: 'Filial',
+      ru: 'Филиал',
+      en: 'Branch'
     },
-    image: '/assets/images/branches/qoqon.jpeg'
+    image: '/assets/images/branches/tashkent_premium.jpeg'
   },
   {
-    id: 10,
+    id: 6,
     name: {
       uz: 'Farg\'ona',
       ru: 'Фергана',
       en: 'Fergana'
     },
-    phone: '90 812 77 88',
+    address: {
+      uz: 'Mustaqillik ko\'chasi, 33',
+      ru: 'улица Мустакиллик, 33',
+      en: 'Mustaqillik st., 33'
+    },
+    phones: ['90 812 77 88', '90 183 77 88'],
     type: {
-      uz: 'Franchiza',
-      ru: 'Франшиза',
-      en: 'Franchise'
+      uz: 'Filial',
+      ru: 'Филиал',
+      en: 'Branch'
     },
     image: '/assets/images/branches/fargona.JPG'
+  },
+  {
+    id: 7,
+    name: {
+      uz: 'Jizzax',
+      ru: 'Джизак',
+      en: 'Jizzakh'
+    },
+    address: {
+      uz: 'Alisher Navoiy ko\'chasi, 24A',
+      ru: 'ул. Алишера Навои, 24A',
+      en: 'Alisher Navoi st., 24A'
+    },
+    phones: ['90 096 77 88', '90 241 77 88'],
+    type: {
+      uz: 'Filial',
+      ru: 'Филиал',
+      en: 'Branch'
+    },
+    image: '/assets/images/branches/tashkent_premium.jpeg'
+  },
+  {
+    id: 8,
+    name: {
+      uz: 'Samarqand',
+      ru: 'Самарканд',
+      en: 'Samarkand'
+    },
+    address: {
+      uz: 'Gagarin ko\'chasi, 81',
+      ru: 'ул. Гагарина, 81',
+      en: 'Gagarin st., 81'
+    },
+    phones: ['90 052 77 88'],
+    type: {
+      uz: 'Filial',
+      ru: 'Филиал',
+      en: 'Branch'
+    },
+    image: '/assets/images/branches/samarqand.jpeg'
+  },
+  {
+    id: 9,
+    name: {
+      uz: 'Xorazm',
+      ru: 'Хорезм',
+      en: 'Khorezm'
+    },
+    address: {
+      uz: 'Urganch, Pahlavon Mahmud ko\'chasi, 5',
+      ru: 'Ургенч, ул. Пахлавана Махмуда, 5',
+      en: 'Urgench, Pahlavon Mahmud st., 5'
+    },
+    phones: ['90 829 77 88'],
+    type: {
+      uz: 'Filial',
+      ru: 'Филиал',
+      en: 'Branch'
+    },
+    image: '/assets/images/branches/namangan.PNG'
+  },
+  {
+    id: 10,
+    name: {
+      uz: 'Buxoro',
+      ru: 'Бухара',
+      en: 'Bukhara'
+    },
+    address: {
+      uz: 'Mustaqillik ko\'chasi, 12',
+      ru: 'ул. Мустакиллик, 12',
+      en: 'Mustaqillik st., 12'
+    },
+    phones: ['90 244 77 88', '90 246 77 88'],
+    type: {
+      uz: 'Filial',
+      ru: 'Филиал',
+      en: 'Branch'
+    },
+    image: '/assets/images/branches/buxoro.JPG'
   },
   {
     id: 11,
@@ -155,13 +230,118 @@ const branches: Branch[] = [
       ru: 'Карши',
       en: 'Karshi'
     },
-    phone: '90 112 77 88',
+    address: {
+      uz: 'Islom Karimov ko\'chasi, 218',
+      ru: 'ул. Ислама Каримова, 218',
+      en: 'Islam Karimov st., 218'
+    },
+    phones: ['90 112 77 88', '90 644 77 88'],
     type: {
-      uz: 'Franchiza',
-      ru: 'Франшиза',
-      en: 'Franchise'
+      uz: 'Filial',
+      ru: 'Филиал',
+      en: 'Branch'
     },
     image: '/assets/images/branches/qarshi.jpeg'
+  },
+  {
+    id: 12,
+    name: {
+      uz: 'Navoiy',
+      ru: 'Навои',
+      en: 'Navoi'
+    },
+    address: {
+      uz: 'O\'zbekiston ko\'chasi, c576',
+      ru: 'Узбекистанская ул., c576',
+      en: 'Uzbekistan st., c576'
+    },
+    phones: ['90 069 77 88'],
+    type: {
+      uz: 'Filial',
+      ru: 'Филиал',
+      en: 'Branch'
+    },
+    image: '/assets/images/branches/navoi.jpeg'
+  },
+  {
+    id: 13,
+    name: {
+      uz: 'Nukus',
+      ru: 'Нукус',
+      en: 'Nukus'
+    },
+    address: {
+      uz: 'Ata joli ko\'chasi, 4',
+      ru: 'ул. Ата жолы, 4',
+      en: 'Ata joly st., 4'
+    },
+    phones: ['90 737 77 88'],
+    type: {
+      uz: 'Filial',
+      ru: 'Филиал',
+      en: 'Branch'
+    },
+    image: '/assets/images/branches/tashkent_premium.jpeg'
+  },
+  {
+    id: 14,
+    name: {
+      uz: 'Qo\'qon',
+      ru: 'Коканд',
+      en: 'Kokand'
+    },
+    address: {
+      uz: 'Farg\'ona viloyati, Qo\'qon, Usta-Bozor ko\'chasi',
+      ru: 'Ферганская область, Коканд, улица Уста-Бозор',
+      en: 'Fergana region, Kokand, Usta-Bozor st.'
+    },
+    phones: ['90 816 77 88'],
+    type: {
+      uz: 'Filial',
+      ru: 'Филиал',
+      en: 'Branch'
+    },
+    image: '/assets/images/branches/qoqon.jpeg'
+  },
+  {
+    id: 15,
+    name: {
+      uz: 'Yunusobod',
+      ru: 'Юнусабад',
+      en: 'Yunusabad'
+    },
+    address: {
+      uz: 'Iftixor ko\'chasi, 119',
+      ru: 'Ифтихор кочаси, 119',
+      en: 'Iftikhor st., 119'
+    },
+    phones: ['90 019 22 00', '90 065 22 00'],
+    type: {
+      uz: 'Filial',
+      ru: 'Филиал',
+      en: 'Branch'
+    },
+    image: '/assets/images/branches/tashkent_premium.jpeg'
+  },
+  {
+    id: 16,
+    name: {
+      uz: 'O\'quv markaz',
+      ru: 'Учебный центр',
+      en: 'Training Center'
+    },
+    address: {
+      uz: 'Bobur ko\'chasi, 59',
+      ru: 'ул. Бабура, 59',
+      en: 'Babur st., 59'
+    },
+    phones: ['90 017 77 88'],
+    type: {
+      uz: 'Ta\'lim markazi',
+      ru: 'Учебный центр',
+      en: 'Training Center'
+    },
+    image: '/assets/images/branches/tashkent_premium.jpeg'
   }
 ];
 
@@ -226,13 +406,17 @@ const Branches = ({ language }: BranchesProps): React.ReactElement => {
                     {branch.address[language]}
                   </p>
                 )}
-                <div className="flex items-center text-gray-600">
-                  <svg className="w-5 h-5 mr-2 text-[rgb(103,44,142)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                  <a href={`tel:+998${branch.phone}`} className="hover:text-[rgb(103,44,142)] transition-colors">
-                    +998 {branch.phone}
-                  </a>
+                <div className="flex flex-col space-y-2">
+                  {branch.phones.map((phone, phoneIndex) => (
+                    <div key={phoneIndex} className="flex items-center text-gray-600">
+                      <svg className="w-5 h-5 mr-2 text-[rgb(103,44,142)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                      <a href={`tel:+998${phone}`} className="hover:text-[rgb(103,44,142)] transition-colors">
+                        +998 {phone}
+                      </a>
+                    </div>
+                  ))}
                 </div>
               </div>
             </motion.div>

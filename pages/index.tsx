@@ -12,6 +12,7 @@ import Destinations from '@/components/sections/Destinations';
 import Study from '@/components/sections/Study';
 import Branches from '@/components/sections/Branches';
 import Footer from '@/components/Layout/Footer';
+import HotTours from '@/components/sections/HotTours';
 import { Language } from '@/types';
 
 const montserrat = Montserrat({
@@ -31,13 +32,15 @@ export default function Home() {
       <SEO language={language} />
       <Layout language={language} onLanguageChange={handleLanguageChange}>
         <Hero language={language} />
+        <HotTours language={language} />
         <About language={language} />
-        <Contact language={language} />
         <Services language={language} />
         <Destinations language={language} />
         <Study language={language} />
         {/* <Reviews language={language} /> */}
         <Branches language={language} />
+        <Contact language={language} />
+
         <Footer language={language} />
       </Layout>
     </div>

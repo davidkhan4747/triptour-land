@@ -4,6 +4,14 @@ import { Language } from '@/types';
 
 const navigation = [
   {
+    href: '#hot-tours',
+    label: {
+      uz: 'Qaynoq turlar',
+      ru: 'Горящие туры',
+      en: 'Hot Tours'
+    }
+  },
+  {
     href: '#about',
     label: {
       uz: 'Biz haqimizda',

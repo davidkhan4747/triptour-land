@@ -78,9 +78,7 @@ export default function Footer({ language }: FooterProps) {
           {/* Logo and Description */}
           <div>
             <Link href="/" className="flex items-center">
-              <h1 className="text-2xl font-bold tracking-tight bg-gradient-to-r from-[rgb(133,74,172)] to-white bg-clip-text text-transparent">
-                TripTour
-              </h1>
+              <img src="/logowhite.png" alt="TripTour" className="h-12" />
             </Link>
             <p className="mt-4 text-gray-400">
               {content.address[language]}
