@@ -17,6 +17,6 @@ export interface PrivacyContent {
 
 export const phoneNumbers: Record<Language, string> = {
   uz: '+998785557788',
-  ru: '+998785557789',
-  en: '+998785557790'
+  ru: '+998785557788',
+  en: '+998785557788'
 };

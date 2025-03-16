@@ -331,8 +331,8 @@ export default function HotTours({ language }: HotToursProps): React.ReactElemen
                     </motion.button>
                     <motion.a
                       href={`tel:${language === 'uz' ? '+998785557788' : 
-                                    language === 'ru' ? '+998785557789' :
-                                    '+998785557790'}`}
+                                    language === 'ru' ? '+998785557788' :
+                                    '+998785557788'}`}
                       className="flex items-center justify-center gap-2 bg-white border-2 border-[rgb(103,44,142)] text-[rgb(103,44,142)] px-4 py-3 rounded-full text-sm font-semibold 
                                hover:bg-[rgb(103,44,142)] hover:text-white transition-all duration-300 
                                transform hover:scale-105 active:scale-95 w-full"
