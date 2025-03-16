@@ -3,8 +3,7 @@ import { useRouter } from 'next/router';
 import PrivacyLayout from '../components/Layout/PrivacyLayout';
 import { Language } from '@/types';
 import Head from 'next/head';
-import { content } from './privacy-policy/content';
-import { phoneNumbers } from './privacy-policy/types';
+import { content, phoneNumbers } from '@/lib/privacy-policy';
 
 const PrivacyPolicy = () => {
   const router = useRouter();

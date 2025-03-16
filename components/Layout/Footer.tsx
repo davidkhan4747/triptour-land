@@ -1,7 +1,7 @@
 import { Language } from '@/types';
 import Link from 'next/link';
 import Image from 'next/image';
-import { phoneNumbers } from '@/pages/privacy-policy/types';
+import { phoneNumbers } from '@/lib/privacy-policy';
 
 
 interface FooterProps {
