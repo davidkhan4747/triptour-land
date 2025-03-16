@@ -53,9 +53,9 @@ export default function Hero({ language }: HeroProps) {
   });
 
   const images = [
-    '/images/dubia.jpg',
-    '/images/tay1.jpg',
-    '/images/yap.jpg'
+    '/images/4.png',
+    '/images/5.png',
+    '/images/6.png'
   ];
 
   useEffect(() => {
