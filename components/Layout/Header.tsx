@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Language } from '@/types';
 
 const navigation = [
@@ -106,7 +107,16 @@ export default function Header({ language, onLanguageChange }: HeaderProps) {
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <div className={`relative transform transition-all duration-300 ease-in-out ${isScrolled ? 'w-10 h-10 scale-95' : 'w-12 h-12'}`}>
+              <Image
+                src={isScrolled ? '/logo.png' : '/logowhite.png'}
+                alt="TripTour Logo"
+                fill
+                className="object-contain transition-all duration-300 group-hover:scale-105"
+                priority
+              />
+            </div>
             <h1 className={`text-3xl font-bold tracking-tight transition-colors ${
               isScrolled 
                 ? 'bg-gradient-to-r from-[rgb(103,44,142)] to-[rgb(133,74,172)] bg-clip-text text-transparent'

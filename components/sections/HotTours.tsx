@@ -295,10 +295,10 @@ export default function HotTours({ language }: HotToursProps): React.ReactElemen
                     transition={{ type: 'spring', stiffness: 300 }}
                   >
                     <div className="text-3xl font-bold text-[rgb(103,44,142)] group-hover:opacity-0 transition-opacity duration-300">
-                      {`${tour.price} сум`}
+                      {`${tour.price} $`}
                     </div>
                     <div className="absolute top-0 left-0 w-full text-3xl font-bold text-[rgb(83,24,122)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {`${tour.price} сум`}
+                      {`${tour.price} $`}
                     </div>
                   </motion.div>
                   <motion.div className="flex items-center space-x-2">
