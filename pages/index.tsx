@@ -11,7 +11,7 @@ import Destinations from '@/components/sections/Destinations';
 // import Reviews from '@/components/sections/Reviews';
 import Study from '@/components/sections/Study';
 import Branches from '@/components/sections/Branches';
-import Footer from '@/components/Layout/Footer';
+
 import HotTours from '@/components/sections/HotTours';
 import { Language } from '@/types';
 

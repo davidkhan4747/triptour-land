@@ -104,7 +104,7 @@ export default function HotTours({ language }: HotToursProps): React.ReactElemen
 
   useEffect(() => {
     fetchTours();
-  }, [language]); // Re-fetch when language changes
+  }, [language, fetchTours]); // Re-fetch when language changes or fetchTours updates
 
   if (isLoading) {
     return (
