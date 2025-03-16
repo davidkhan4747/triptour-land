@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 import { Montserrat } from 'next/font/google';
 import Layout from '@/components/Layout/Layout';
 import SEO from '@/components/SEO';
@@ -11,7 +10,6 @@ import Destinations from '@/components/sections/Destinations';
 // import Reviews from '@/components/sections/Reviews';
 import Study from '@/components/sections/Study';
 import Branches from '@/components/sections/Branches';
-
 import HotTours from '@/components/sections/HotTours';
 import { Language } from '@/types';
 
