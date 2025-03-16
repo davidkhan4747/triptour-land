@@ -41,7 +41,7 @@ export default function Home() {
         <Branches language={language} />
         <Contact language={language} />
 
-        <Footer language={language} />
+        {/*<Footer language={language} />*/}
       </Layout>
     </div>
   );

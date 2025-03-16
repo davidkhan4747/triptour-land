@@ -100,14 +100,14 @@ export default function Header({ language, onLanguageChange }: HeaderProps) {
 
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white py-2 shadow-md' : 'bg-black/20 backdrop-blur-sm py-4'
+      className={`fixed w-full z-40 transition-all duration-300 ${
+        isScrolled ? 'bg-white/95 py-2 shadow-md backdrop-blur-sm' : 'bg-black/20 backdrop-blur-sm py-4'
       }`}
     >
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 group">
+          <Link href="/" className="flex items-center gap-2.5 group relative z-50">
             <div className={`relative transform transition-all duration-300 ease-in-out ${isScrolled ? 'w-10 h-10 scale-95' : 'w-12 h-12'}`}>
               <Image
                 src={isScrolled ? '/logo.png' : '/logowhite.png'}
@@ -128,7 +128,7 @@ export default function Header({ language, onLanguageChange }: HeaderProps) {
           </Link>
 
           {/* Navigation and Language Selector */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6 relative z-50">
             {navigation.map((item) => (
               <Link
                 key={item.href}
@@ -188,7 +188,7 @@ export default function Header({ language, onLanguageChange }: HeaderProps) {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 bg-white rounded-lg shadow-lg">
+          <div className="md:hidden mt-4 pb-4 bg-white/95 backdrop-blur-md rounded-lg shadow-lg relative z-50">
             <div className="flex flex-col py-2">
               {navigation.map((item) => (
                 <Link

@@ -12,6 +12,11 @@ const content = {
     ru: 'Компания',
     en: 'Company'
   },
+  privacy: {
+    uz: 'Maxfiylik siyosati',
+    ru: 'Политика конфиденциальности',
+    en: 'Privacy Policy'
+  },
   socials: {
     uz: 'Ijtimoiy tarmoqlar',
     ru: 'Социальные сети',
@@ -104,7 +109,11 @@ export default function Footer({ language }: FooterProps) {
                   {content.branches[language]}
                 </Link>
               </li>
-
+              <li>
+                <Link href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">
+                  {content.privacy[language]}
+                </Link>
+              </li>
             </ul>
           </div>
 {/* Contact Info */}
