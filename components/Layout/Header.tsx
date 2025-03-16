@@ -13,6 +13,14 @@ const navigation = [
     }
   },
   {
+    href: '#payment',
+    label: {
+      uz: "To'lov",
+      ru: 'Оплата',
+      en: 'Payment'
+    }
+  },
+  {
     href: '#about',
     label: {
       uz: 'Biz haqimizda',

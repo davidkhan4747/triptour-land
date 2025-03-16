@@ -14,6 +14,11 @@ const content = {
     ru: 'Компания',
     en: 'Company'
   },
+  payment: {
+    uz: "To'lov",
+    ru: 'Оплата',
+    en: 'Payment'
+  },
   privacy: {
     uz: 'Maxfiylik siyosati',
     ru: 'Политика конфиденциальности',
@@ -109,6 +114,11 @@ export default function Footer({ language }: FooterProps) {
           <div>
             <h3 className="text-lg font-semibold mb-4">{content.company[language]}</h3>
             <ul className="space-y-2">
+              <li>
+                <Link href="#payment" className="text-gray-400 hover:text-white transition-colors">
+                  {content.payment[language]}
+                </Link>
+              </li>
               <li>
                 <Link href="#about" className="text-gray-400 hover:text-white transition-colors">
                   {content.about[language]}
