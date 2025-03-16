@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import React, { useEffect, useState, useCallback } from 'react';
 import { Language } from '@/types';
 import Image from 'next/image';
+import TourRequestModal from '../modals/TourRequestModal';
 
 interface Tour {
   id: string;
@@ -27,10 +28,20 @@ interface HotToursProps {
   language: Language;
 }
 
+const translations = {
+  requestTour: {
+    uz: 'Ariza qoldirish',
+    ru: 'Оставить заявку',
+    en: 'Request Tour'
+  }
+};
+
 export default function HotTours({ language }: HotToursProps): React.ReactElement {
   const [tours, setTours] = useState<Tour[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedTour, setSelectedTour] = useState<Tour | null>(null);
 
   const fetchTours = useCallback(async () => {
     try {
@@ -287,36 +298,57 @@ export default function HotTours({ language }: HotToursProps): React.ReactElemen
                     {tour.nutrition}
                   </p>
                 )}
-                <div className="flex justify-between items-center mt-4">
+                <div className="mt-4 space-y-4">
                   <motion.div 
                     className="relative group cursor-pointer"
                     initial={{ scale: 1 }}
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: 'spring', stiffness: 300 }}
                   >
-                    <div className="text-3xl font-bold text-[rgb(103,44,142)] group-hover:opacity-0 transition-opacity duration-300">
+                    <div className="text-3xl font-bold text-[rgb(103,44,142)] group-hover:opacity-0 transition-opacity duration-300 text-center">
                       {`${tour.price} $`}
                     </div>
-                    <div className="absolute top-0 left-0 w-full text-3xl font-bold text-[rgb(83,24,122)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute top-0 left-0 w-full text-3xl font-bold text-[rgb(83,24,122)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
                       {`${tour.price} $`}
                     </div>
                   </motion.div>
-                  <motion.div className="flex items-center space-x-2">
+                  <div className="grid grid-cols-2 gap-3">
+                    <motion.button
+                      onClick={() => {
+                        setSelectedTour(tour);
+                        setIsModalOpen(true);
+                      }}
+                      className="flex items-center justify-center gap-2 bg-[rgb(103,44,142)] text-white px-4 py-3 rounded-full text-sm font-semibold 
+                               hover:bg-[rgb(83,24,122)] transition-all duration-300 
+                               transform hover:scale-105 active:scale-95 w-full"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                      </svg>
+                      {language === 'uz' ? 'Ariza qoldirish' :
+                       language === 'ru' ? 'Оставить заявку' :
+                       'Request Tour'}
+                    </motion.button>
                     <motion.a
                       href={`tel:${language === 'uz' ? '+998785557788' : 
                                     language === 'ru' ? '+998785557789' :
                                     '+998785557790'}`}
-                      className="inline-block bg-[rgb(103,44,142)] text-white px-6 py-2 rounded-full text-sm font-semibold 
-                               hover:bg-[rgb(83,24,122)] transition-all duration-300 
-                               transform hover:scale-105 active:scale-95"
+                      className="flex items-center justify-center gap-2 bg-white border-2 border-[rgb(103,44,142)] text-[rgb(103,44,142)] px-4 py-3 rounded-full text-sm font-semibold 
+                               hover:bg-[rgb(103,44,142)] hover:text-white transition-all duration-300 
+                               transform hover:scale-105 active:scale-95 w-full"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
                       {language === 'uz' ? 'Qo\'ng\'iroq qiling' :
                        language === 'ru' ? 'Позвонить' :
                        'Call Now'}
                     </motion.a>
-                  </motion.div>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -324,6 +356,17 @@ export default function HotTours({ language }: HotToursProps): React.ReactElemen
           </div>
         )}
       </div>
+
+      <TourRequestModal
+        isOpen={isModalOpen}
+        onClose={() => {
+          setIsModalOpen(false);
+          setSelectedTour(null);
+        }}
+        language={language}
+        tourName={selectedTour?.country || ''}
+        tourPrice={selectedTour?.price}
+      />
     </section>
   );
 }

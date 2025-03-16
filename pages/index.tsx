@@ -11,6 +11,7 @@ import Destinations from '@/components/sections/Destinations';
 import Study from '@/components/sections/Study';
 import Branches from '@/components/sections/Branches';
 import HotTours from '@/components/sections/HotTours';
+import PaymentMethod from '@/components/sections/PaymentMethod';
 import { Language } from '@/types';
 
 const montserrat = Montserrat({
@@ -31,6 +32,7 @@ export default function Home() {
       <Layout language={language} onLanguageChange={handleLanguageChange}>
         <Hero language={language} />
         <HotTours language={language} />
+        <PaymentMethod language={language} />
         <About language={language} />
         <Services language={language} />
         <Destinations language={language} />
