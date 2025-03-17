@@ -20,7 +20,7 @@ const montserrat = Montserrat({
 });
 
 export default function Home() {
-  const [language, setLanguage] = useState<Language>('uz');
+  const [language, setLanguage] = useState<Language>('ru');
 
   const handleLanguageChange = (newLanguage: Language) => {
     setLanguage(newLanguage);
