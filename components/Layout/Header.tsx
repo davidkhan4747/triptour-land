@@ -29,14 +29,6 @@ const navigation = [
     }
   },
   {
-    href: '#contact',
-    label: {
-      uz: 'Kontaktlar',
-      ru: 'Контакты',
-      en: 'Contact'
-    }
-  },
-  {
     href: '#services',
     label: {
       uz: 'Xizmatlar',
@@ -58,6 +50,14 @@ const navigation = [
       uz: 'O\'quv markaz',
       ru: 'Учебный центр',
       en: 'Study Center'
+    }
+  },
+  {
+    href: '#contact',
+    label: {
+      uz: 'Kontaktlar',
+      ru: 'Контакты',
+      en: 'Contact'
     }
   },
   // {

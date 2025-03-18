@@ -72,10 +72,10 @@ const branches: Branch[] = [
     },
     address: {
       uz: 'Bobur ko\'chasi, 59',
-      ru: 'Бобур кочаси, 59',
-      en: 'Bobur st., 59'
+      ru: 'улица Бобура, 59',
+      en: 'Bobur street, 59'
     },
-    phones: ['90 193 88 88', '90 194 88 88'],
+    phones: ['90 049 77 88'],
     type: {
       uz: 'Filial',
       ru: 'Филиал',

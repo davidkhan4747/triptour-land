@@ -42,11 +42,7 @@ const translations = {
     ru: 'Ваш номер телефона',
     en: 'Your Phone Number'
   },
-  email: {
-    uz: 'Elektron pochtangiz',
-    ru: 'Ваш email',
-    en: 'Your Email'
-  },
+
   message: {
     uz: 'Xabaringiz',
     ru: 'Ваше сообщение',
@@ -78,7 +74,7 @@ export default function TourRequestModal({ isOpen, onClose, language, tourName, 
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    email: '',
+
     message: ''
   });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -109,7 +105,7 @@ export default function TourRequestModal({ isOpen, onClose, language, tourName, 
       setTimeout(() => {
         onClose();
         setStatus('idle');
-        setFormData({ name: '', phone: '', email: '', message: '' });
+        setFormData({ name: '', phone: '', message: '' });
       }, 2000);
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
@@ -212,21 +208,7 @@ export default function TourRequestModal({ isOpen, onClose, language, tourName, 
                       className="w-full pl-10 pr-3 py-2 text-sm border border-gray-200 rounded-md focus:ring-1 focus:ring-[rgb(103,44,142)] focus:border-[rgb(103,44,142)] text-gray-900 placeholder-gray-500 outline-none"
                     />
                   </div>
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
-                      </svg>
-                    </div>
-                    <input
-                      type="email"
-                      placeholder={translations.email[language]}
-                      required
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full pl-10 pr-3 py-2 text-sm border border-gray-200 rounded-md focus:ring-1 focus:ring-[rgb(103,44,142)] focus:border-[rgb(103,44,142)] text-gray-900 placeholder-gray-500 outline-none"
-                    />
-                  </div>
+
                   <div>
                     <textarea
                       placeholder={translations.message[language]}
