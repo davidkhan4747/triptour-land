@@ -47,7 +47,7 @@ export default function HotTours({ language }: HotToursProps): React.ReactElemen
     try {
       const response = await fetch('https://api.triptour.uz/tour', {
         headers: {
-          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjliYjczNDgxLWUwMGItNGM2Mi1iMWFjLTQ0YjQ5OGJhZGUxYiIsInVzZXJuYW1lIjoiY2VvNzc4OCIsInR5cGUiOiJVU0VSIiwicm9sZXMiOlsiU1VQRVJBRE1JTiJdLCJpYXQiOjE3Mzk4MDgyNDksImV4cCI6MTc0MjQwMDI0OX0.5qMlu8PkI3Pk9zQw2kVuZh9w0-rlfRPFX8EoVGWnhsA'
+          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjliYjczNDgxLWUwMGItNGM2Mi1iMWFjLTQ0YjQ5OGJhZGUxYiIsInVzZXJuYW1lIjoiY2VvNzc4OCIsInR5cGUiOiJVU0VSIiwicm9sZXMiOlsiU1VQRVJBRE1JTiJdLCJpYXQiOjE3NDI0ODgwMzcsImV4cCI6MTc0NTA4MDAzN30.PJwK5xf9NuiSXwDpDGyXrDCq3lare8x3t4qcwCE0OeI'
         }
       });
 
