@@ -95,7 +95,7 @@ const branches: Branch[] = [
       ru: 'Туракурганская улица, Наманган 182',
       en: 'Turaqurgon st., Namangan 182'
     },
-    phones: ['90 053 88 88', '90 496 88 88'],
+    phones: ['90 053 77 88', '90 496 77 88'],
     type: {
       uz: 'Filial',
       ru: 'Филиал',
@@ -121,7 +121,7 @@ const branches: Branch[] = [
       ru: 'Филиал',
       en: 'Branch'
     },
-    image: '/assets/images/branches/tashkent_premium.jpeg'
+    image: '/assets/images/branches/andijan.jpeg'
   },
   {
     id: 6,
@@ -161,7 +161,7 @@ const branches: Branch[] = [
       ru: 'Филиал',
       en: 'Branch'
     },
-    image: '/assets/images/branches/tashkent_premium.jpeg'
+    image: '/assets/images/branches/jizzakh.jpg'
   },
   {
     id: 8,
@@ -321,7 +321,7 @@ const branches: Branch[] = [
       ru: 'Филиал',
       en: 'Branch'
     },
-    image: '/assets/images/branches/tashkent_premium.jpeg'
+    image: '/assets/images/branches/yunus.jpg'
   },
   {
     id: 16,
